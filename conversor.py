@@ -7,9 +7,12 @@ def convertir_lempiras_a_dolares(lempiras):
 
 st.title("Conversor de Monedas")
 
+st.sidebar.markdown(f"**Desarrollado por:** \nDavid Requeno")
+
 lempiras = st.number_input("Ingrese la cantidad de dinero a convertir:", min_value=0.0, format="%.2f")
 
 if st.button("Convertir"):
     dolares = convertir_lempiras_a_dolares(lempiras)
     st.write(f"La cantidad en dólares es: ${dolares:.2f}")  
     st.success("Conversión realizada con éxito.")
+
