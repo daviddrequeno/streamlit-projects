@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
+st.sidebar.markdown(f"**Desarrollado por:** \nDavid Requeno")
+
 CAMPUS = ["Central", "Norte", "Sur", "Virtual"]
 
 PROFESORES = {
@@ -44,8 +46,6 @@ if "table_data" not in st.session_state:
 
 st.title("Registro de Asignaturas Matriculadas")
 
-st.sidebar.markdown(f"**Desarrollado por:** \nDavid Requeno")
-
 with st.form("asignatura_form"):
     nombre = st.text_input("Nombre de la Asignatura")
 
@@ -77,4 +77,5 @@ with st.form("asignatura_form"):
 
 st.subheader("Reporte de Asignaturas")
 st.dataframe(st.session_state.table_data, use_container_width=True)
+
 
