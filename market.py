@@ -32,7 +32,10 @@ with st.form("producto_form"):
 
 st.dataframe(st.session_state.table_data)
 
+st.sidebar.markdown(f"**Desarrollado por:** \nDavid Requeno")
+
 if st.button("Calcular total a pagar"):
     total = st.session_state.table_data['Subtotal'].sum()
     st.subheader(f"Total a Pagar: ${total:.2f}")
     st.write("Gracias por su compra. ¡Vuelva pronto!")
+
