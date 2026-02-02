@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(
+    page_title="Calculadora de Presupuesto Universitario",
+    page_icon="🎓",
+    layout="wide"
+)
+
 def agregar_ingreso(categoria, monto):
     """Agrega un ingreso a la tabla de ingresos"""
     nueva_fila = {
@@ -29,12 +35,6 @@ if "datos_financieros" not in st.session_state:
     st.session_state.datos_financieros = pd.DataFrame(
         columns=['Tipo', 'Categoría', 'Monto']
     )
-
-st.set_page_config(
-    page_title="Calculadora de Presupuesto Universitario",
-    page_icon="🎓",
-    layout="wide"
-)
 
 st.title("🎓 Calculadora de Presupuesto Universitario")
 
